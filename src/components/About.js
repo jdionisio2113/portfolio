@@ -16,8 +16,8 @@ function About() {
 				<p className="about_description">
 					Hi I'm Justin! I'm a Front End Developer with a passion for creating user-friendly websites and
 					applications. I currently have a skillset specializing in HTML, CSS, and Javascript with other
-					interests including React and Redux. In addition to my knowlege base, I continually seek new ways to
-					improve as a developer and stay up to date with new technologies within the industry to deliver
+					interests including React and Redux. In addition to my knowledge base, I continually seek new ways
+					to improve as a developer and stay up-to-date with new technologies within the industry to deliver
 					exceptional work.
 				</p>
 			</div>

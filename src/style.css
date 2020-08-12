@@ -49,38 +49,57 @@ button {
 	flex-direction: column;
 	color: white;
 	text-align: center;
-	-webkit-animation: text-focus-in 1s ease-in both;
-	animation: text-focus-in 1s ease-in both;
+	animation: fadeIn ease 5s;
+	-webkit-animation: fadeIn ease 5s;
 }
 
-@-webkit-keyframes text {
+@keyframes fadeIn {
 	0% {
-		-webkit-filter: blur(12px);
-		filter: blur(12px);
 		opacity: 0;
 	}
 	100% {
-		-webkit-filter: blur(0px);
-		filter: blur(0px);
 		opacity: 1;
 	}
 }
-@keyframes text-focus-in {
+
+@-moz-keyframes fadeIn {
 	0% {
-		-webkit-filter: blur(12px);
-		filter: blur(12px);
 		opacity: 0;
 	}
 	100% {
-		-webkit-filter: blur(0px);
-		filter: blur(0px);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-o-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@-ms-keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
 		opacity: 1;
 	}
 }
 
 .intro-line {
 	margin-bottom: 5px;
-	/* font-size: 2.3em; */
 }
 
 .front-end {
