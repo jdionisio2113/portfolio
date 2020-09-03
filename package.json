@@ -26,10 +26,13 @@
 		"css-loader": "^4.2.0",
 		"dom": "0.0.3",
 		"firebase": "^7.17.1",
+		"node": "^14.8.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-router": "^5.2.0",
 		"react-router-dom": "^5.2.0",
+		"sass": "^1.26.10",
+		"sass-loader": "^10.0.1",
 		"url-loader": "^4.1.0",
 		"webpack-dev-server": "^3.11.0"
 	}

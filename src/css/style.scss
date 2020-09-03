@@ -1,3 +1,4 @@
+@import 'config';
 * {
 	box-sizing: border-box;
 }
@@ -10,28 +11,28 @@ body {
 body {
 	letter-spacing: 1px;
 	margin: 0;
-	font-family: "Noto Sans JP", sans-serif;
-	background-color: #2a2a2a;
-}
+	font-family: $font-stack;
+	background-color: $primary-color;
 
-ul {
-	margin: 0;
-	list-style: none;
-}
+	ul {
+		margin: 0;
+		list-style: none;
+	}
 
-li {
-	list-style: none;
-}
+	li {
+		list-style: none;
+	}
 
-a {
-	text-decoration: none;
-	color: white;
-}
+	a {
+		text-decoration: none;
+		color: $white-color;
+	}
 
-button {
-	background: none;
-	border: none;
-	outline: 0;
+	button {
+		background: none;
+		border: none;
+		outline: 0;
+	}
 }
 
 /* ================HOME================= */
@@ -47,7 +48,7 @@ button {
 .text {
 	display: flex;
 	flex-direction: column;
-	color: white;
+	color: $white-color;
 	text-align: center;
 	animation: fadeIn ease 5s;
 	-webkit-animation: fadeIn ease 5s;
@@ -137,10 +138,6 @@ button {
 	transition: .5s;
 }
 
-.view_work a {
-	text-decoration: none;
-}
-
 .fa-arrow-right {
 	margin: 0 .5em;
 }
@@ -162,7 +159,7 @@ button {
 	height: 100vh;
 	background-color: #2a2a2a;
 	z-index: 1;
-	color: white;
+	color: $white-color;
 	animation: growDown .5s ease-in-out forwards;
 	transform-origin: top center;
 	position: relative;
@@ -262,15 +259,15 @@ ul {
 	justify-content: center;
 	margin: 2em auto;
 	padding: 0;
-}
 
-.skill_section p {
-	font-size: 1.2em;
-	text-align: center;
-}
+	li {
+		margin: 0 20px;
+	}
 
-.skill_section li {
-	margin: 0 20px;
+	p {
+		font-size: 1.2em;
+		text-align: center;
+	}
 }
 
 /* ================PROJECT================= */
@@ -278,12 +275,6 @@ ul {
 .project-wrapper {
 	text-align: center;
 	margin-top: 6em;
-}
-
-.project-container {
-	/* display: flex;
-        flex-direction: column;
-        justify-content: center */
 }
 
 .project {
@@ -325,7 +316,7 @@ ul {
 	background-color: #3c489c;
 	padding: 10px;
 	border-radius: 5px;
-	color: white;
+	color: $white-color;
 	transition: all 0.4s ease-in-out;
 }
 
@@ -339,20 +330,28 @@ ul {
 	padding: 0 1em;
 	margin-bottom: 1em;
 	flex-wrap: wrap;
+
+	li {
+		text-transform: uppercase;
+		font-family: MontSerrat, Tahoma, Arial, sans-serif;
+		font-weight: 700;
+		font-size: .75em;
+		color: #404040;
+	}
 }
 
-.project-description li {
-	text-transform: uppercase;
-	font-family: MontSerrat, Tahoma, Arial, sans-serif;
-	font-weight: 700;
-	font-size: .75em;
-	color: #404040;
-}
+// .project-description li {
+// 	text-transform: uppercase;
+// 	font-family: MontSerrat, Tahoma, Arial, sans-serif;
+// 	font-weight: 700;
+// 	font-size: .75em;
+// 	color: #404040;
+// }
 
 /* ================CONTACT================= */
 
 .contact-container li {
-	color: white;
+	color: $white-color;
 	display: flex;
 	align-items: center;
 	margin: 2em 0;
@@ -364,33 +363,4 @@ ul {
 	margin: 0 .5em;
 }
 
-@media screen and (min-width: 600px) {
-	.about_description {
-		text-align: center;
-		max-width: 70%;
-	}
-
-	.text {
-		font-size: 1.5em;
-	}
-
-	.contact-container ul {
-		width: 400px;
-		margin: 5em auto;
-	}
-
-	.project-wrapper h2,
-	.contact-container h2 {
-		font-size: 4em;
-	}
-
-	.project-container {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.line {
-		width: 20%;
-	}
-}
+@import 'mobile';
