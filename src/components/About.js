@@ -7,6 +7,7 @@ import webpackLogo from '../../public/img/webpack.png';
 import gitLogo from '../../public/img/git.png';
 import bootstrapLogo from '../../public/img/bootstrap_logo.png';
 import sassLogo from '../../public/img/sass-logo.png';
+import nodeLogo from '../../public/img/nodejs.png';
 
 function About() {
 	return (
@@ -41,6 +42,10 @@ function About() {
 					<li>
 						<img className="skill_logo" src={reduxLogo} />
 						<p>Redux</p>
+					</li>
+					<li>
+						<img className="skill_logo" src={nodeLogo} />
+						<p>Node JS</p>
 					</li>
 					<li>
 						<img className="skill_logo" src={webpackLogo} />
