@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import pokedexscr2 from '../img/pokedexscr2';
 
 class ProjectModal extends Component {
 	constructor(props) {

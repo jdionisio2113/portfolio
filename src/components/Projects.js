@@ -1,30 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ProjectModal from './ProjectModal';
-
-const Thumbnail = function({ project, toggleModal }) {
-	const { display_name, name, giph, tech, link, github } = project;
-	return (
-		<div className="project-thumbnail-container">
-			<div className="project-description">
-				<img src={giph} className="project" />
-				<h3>{display_name}</h3>
-				<ul>{tech.map((techName) => <li key={techName}>{techName}</li>)}</ul>
-				<div className="project-buttons">
-					<a href={link} target="_blank">
-						Visit website
-					</a>
-					<a href={github} target="_blank">
-						View code
-					</a>
-					<a href="#" onClick={() => toggleModal(name)}>
-						About
-					</a>
-				</div>
-			</div>
-		</div>
-	);
-};
+import ProjectCard from './ProjectCard';
 
 class Projects extends Component {
 	constructor(props) {
@@ -80,7 +57,6 @@ class Projects extends Component {
 	}
 
 	toggleModal(projectObj) {
-		// clear projectObj after closing modal
 		const projectInModal = this.state.projects.filter((project) => project.name === projectObj)[0];
 
 		this.setState({
@@ -100,7 +76,7 @@ class Projects extends Component {
 				{this.state.showModal === true ? <ProjectModal project={projectInModal} /> : null}
 				<div className="project-container">
 					{projects.map((project) => (
-						<Thumbnail project={project} toggleModal={this.toggleModal} key={project.name} />
+						<ProjectCard project={project} toggleModal={this.toggleModal} key={project.name} />
 					))}
 				</div>
 			</div>
@@ -109,26 +85,3 @@ class Projects extends Component {
 }
 
 export default Projects;
-
-// class Modal extends React.Component {
-// 	constructor(props) {
-// 		super(props);
-
-// 		this.state = {
-// 			pokemon: {
-// 				img: '...',
-// 				about: '...'
-// 			},
-// 			covid: {
-// 				img: '...',
-// 				about: '...'
-// 			},
-// 		}
-// 	}
-
-// 	render() {
-// 		// return
-// 	}
-// }
-
-// <Modal project='pokemon' />
