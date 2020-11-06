@@ -297,11 +297,7 @@ ul {
 	padding: .5em;
 }
 
-.netflix-project,
-.covid-project,
-.pokedex-project,
-.wiki-project,
-.quote-generator-project {
+.project-thumbnail-container {
 	margin: 2em;
 }
 
@@ -319,6 +315,7 @@ ul {
 	border-radius: 5px;
 	color: $white-color;
 	transition: all 0.4s ease-in-out;
+	min-width: 100px;
 }
 
 .project-buttons a:hover {
@@ -338,6 +335,7 @@ ul {
 		font-weight: 700;
 		font-size: .75em;
 		color: #404040;
+		min-width: 75px;
 	}
 }
 
@@ -352,8 +350,33 @@ ul {
 
 .fa-linkedin,
 .fa-github,
-.fa-envelope {
+.fa-envelope,
+.fa-file-pdf {
 	margin: 0 .5em;
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	right: auto;
+	bottom: auto;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	background-color: lightgrey;
+	width: 50%;
+	height: 500px;
+	border-radius: 5px;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 @import 'mobile';

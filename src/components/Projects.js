@@ -1,8 +1,5 @@
-// import React from 'react';
-// import ProjectModal from './ProjectModal';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import Modal from 'react-modal';
 import ProjectModal from './ProjectModal';
 
 const Thumbnail = function({ project, toggleModal }) {
@@ -20,9 +17,6 @@ const Thumbnail = function({ project, toggleModal }) {
 					<a href={github} target="_blank">
 						View code
 					</a>
-					{/* <Link to="/PokedexApp" onClick={this.toggleModal}>
-									About
-								</Link> */}
 					<a href="#" onClick={() => toggleModal(name)}>
 						About
 					</a>
@@ -80,18 +74,14 @@ class Projects extends Component {
 					github: 'https://github.com/jdionisio2113/Random-Quote-Generator'
 				}
 			]
-			// pokemon: {
-			// 	// img: pokedexscr2,
-			// 	about: 'pokedexabout'
-			// }
 		};
 
 		this.toggleModal = this.toggleModal.bind(this);
-		// this.projectAboutDisplay = this.projectAboutDisplay.bind(this);
 	}
 
-	toggleModal(projectName) {
-		const projectInModal = this.state.projects.filter((project) => project.name === projectName)[0];
+	toggleModal(projectObj) {
+		// clear projectObj after closing modal
+		const projectInModal = this.state.projects.filter((project) => project.name === projectObj)[0];
 
 		this.setState({
 			showModal: !this.state.showModal,
@@ -100,18 +90,6 @@ class Projects extends Component {
 		console.log(this.state.showModal);
 	}
 
-	// projectAboutDisplay({ children }) {
-	// 	return (
-	// 		<div className="modal-overlay">
-	// 			<div className="modal">
-	// 				<i className="fas fa-times" onClick={this.toggleModal} />
-	// 				{/* <h1>Hello Modal</h1> */}
-	// 				{children}
-	// 			</div>
-	// 		</div>
-	// 	);
-	// }
-
 	render() {
 		const { projects, projectInModal } = this.state;
 
@@ -119,14 +97,7 @@ class Projects extends Component {
 			<div className="project-wrapper">
 				<h2>Projects</h2>
 				<div className="line" />
-				{/* <div className="modal-container"> */}
-				{this.state.showModal === true ? (
-					// <ProjectModal>
-					// 	<p>{this.state.pokemon.about}</p>
-					// </ProjectModal>
-					<ProjectModal project={projectInModal} />
-				) : null}
-				{/* </div> */}
+				{this.state.showModal === true ? <ProjectModal project={projectInModal} /> : null}
 				<div className="project-container">
 					{projects.map((project) => (
 						<Thumbnail project={project} toggleModal={this.toggleModal} key={project.name} />

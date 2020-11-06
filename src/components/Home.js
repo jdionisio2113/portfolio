@@ -15,6 +15,9 @@ function Home() {
 					<a href="https://www.linkedin.com/in/justin-dionisio-3014a2193/" target="_blank">
 						<i className="fab fa-linkedin fa-2x" />
 					</a>
+					<a href="#" target="_blank">
+						<i class="far fa-file-pdf fa-2x" />
+					</a>
 				</div>
 				<button>
 					<li>
