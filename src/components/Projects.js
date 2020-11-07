@@ -63,17 +63,16 @@ class Projects extends Component {
 			showModal: !this.state.showModal,
 			projectInModal
 		});
-		console.log(this.state.showModal);
 	}
 
 	render() {
-		const { projects, projectInModal } = this.state;
+		const { projects, projectInModal, showModal } = this.state;
 
 		return (
 			<div className="project-wrapper">
 				<h2>Projects</h2>
 				<div className="line" />
-				{this.state.showModal === true ? <ProjectModal project={projectInModal} /> : null}
+				{showModal === true ? <ProjectModal project={projectInModal} toggleModal={this.toggleModal} /> : null}
 				<div className="project-container">
 					{projects.map((project) => (
 						<ProjectCard project={project} toggleModal={this.toggleModal} key={project.name} />
