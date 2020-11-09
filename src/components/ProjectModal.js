@@ -6,6 +6,8 @@ function ProjectModal({ toggleModal, project }) {
 			<div className="modal">
 				<i className="fas fa-times" onClick={() => toggleModal()} />
 				<h1>{project.display_name}</h1>
+				<img src={project.image} className="project-screenshot" />
+				<p className="project-modal-description">{project.description}</p>
 			</div>
 		</div>
 	);

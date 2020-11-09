@@ -355,6 +355,8 @@ ul {
 	margin: 0 .5em;
 }
 
+/* ================PROJECT MODAL================= */
+
 .modal {
 	position: absolute;
 	top: 50%;
@@ -364,8 +366,8 @@ ul {
 	margin-right: -50%;
 	transform: translate(-50%, -50%);
 	background-color: lightgrey;
-	width: 50%;
-	height: 500px;
+	width: 55%;
+	// height: 550px;
 	border-radius: 5px;
 }
 
@@ -377,6 +379,23 @@ ul {
 	bottom: 0;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.project-screenshot {
+	width: 70%;
+	padding: .3em 0;
+}
+
+.fa-times {
+	position: absolute;
+	left: 0;
+	margin: 1em;
+}
+
+.project-modal-description {
+	width: 75%;
+	margin: 1.3em auto;
+	font-size: 1.2em;
 }
 
 @import 'mobile';
