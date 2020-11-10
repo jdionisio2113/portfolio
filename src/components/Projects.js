@@ -57,7 +57,7 @@ class Projects extends Component {
 					github: 'https://github.com/jdionisio2113/Wiki-App',
 					image: wikipedia_screenshot,
 					description:
-						'A wikepedia clone and allows users to search and and is given links as results that leads them to the real wikipedia website for information.'
+						'A wikepedia clone and allows users to search and is given links as results that leads them to the real wikipedia website for information.'
 				},
 				{
 					name: 'random_quote_generator',

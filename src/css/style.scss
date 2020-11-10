@@ -303,6 +303,7 @@ ul {
 
 .project-buttons {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 	width: 80%;
 	margin: 0 auto;
@@ -316,6 +317,7 @@ ul {
 	color: $white-color;
 	transition: all 0.4s ease-in-out;
 	min-width: 100px;
+	margin: .5em 0;
 }
 
 .project-buttons a:hover {
@@ -335,7 +337,7 @@ ul {
 		font-weight: 700;
 		font-size: .75em;
 		color: #404040;
-		min-width: 75px;
+		// min-width: 75px;
 	}
 }
 
